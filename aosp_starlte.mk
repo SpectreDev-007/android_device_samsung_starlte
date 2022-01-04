@@ -27,6 +27,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 TARGET_INCLUDE_PIXEL_CHARGER := true
 IS_PHONE := true
+Elixir_MAINTAINER := Cyder(Lumine)
 CUSTOM_BUILD_TYPE := OFFICIAL
 TARGET_SUPPORTS_GOOGLE_RECORDER := false
 TARGET_INCLUDE_STOCK_ACORE := false
@@ -41,20 +42,12 @@ PRODUCT_MANUFACTURER := samsung
 
 PRODUCT_GMS_CLIENTID_BASE := android-samsung
 
-BUILD_FINGERPRINT := "google/marlin/marlin:10/QP1A.191005.007.A3/5972272:user/release-keys"
+BUILD_FINGERPRINT := "google/raven/raven:12/SD1A.210817.036/7805805:user/release-keys"
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=starltexx \
-    PRIVATE_BUILD_DESC="marlin-user 10 QP1A.191005.007.A3 5972272 release-keys"
+    PRIVATE_BUILD_DESC="raven-user 12 SD1A.210817.036 7805805 release-keys"
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.PDA=G960FXXUCFTK1 \
-    ro.build.fingerprint=google/marlin/marlin:10/QP1A.191005.007.A3/5972272:user/release-keys
-
-SYSTEM_PROPERTY_PROPERTIES += \
-    org.elixir.device.name=Samsung Galaxy S9
-    ro.elixir.device.name=Samsung Galaxy S9
-    ro.elixir.device=starlte
-    ro.elixir.maintainer=Cyder  
-    ro.elixir.maintainer.username=Cyderxxv
-    ro.elixir.group.url=t.me/Elixir9810
+    ro.build.fingerprint=google/raven/raven:12/SD1A.210817.036/7805805:user/release-keys
