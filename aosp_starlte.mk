@@ -23,21 +23,23 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
 $(call inherit-product, device/samsung/starlte/device.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/arrow/config/common.mk)
+# Inherit some common Project Elixir stuff.
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 TARGET_INCLUDE_PIXEL_CHARGER := true
+IS_PHONE := true
+CUSTOM_BUILD_TYPE := OFFICIAL
+TARGET_SUPPORTS_GOOGLE_RECORDER := false
+TARGET_INCLUDE_STOCK_ACORE := false
+TARGET_INCLUDE_LIVE_WALLPAPERS := true
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := starlte
-PRODUCT_NAME := arrow_starlte
+PRODUCT_NAME := aosp_starlte
 PRODUCT_BRAND := samsung
 PRODUCT_MODEL := SM-G960F
 PRODUCT_MANUFACTURER := samsung
 
 PRODUCT_GMS_CLIENTID_BASE := android-samsung
-
-# ArrowOS Properties
-DEVICE_MAINTAINER := Baddar90
 
 BUILD_FINGERPRINT := "google/marlin/marlin:10/QP1A.191005.007.A3/5972272:user/release-keys"
 
@@ -48,3 +50,11 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.PDA=G960FXXUCFTK1 \
     ro.build.fingerprint=google/marlin/marlin:10/QP1A.191005.007.A3/5972272:user/release-keys
+
+SYSTEM_PROPERTY_PROPERTIES += \
+    org.elixir.device.name=Samsung Galaxy S9
+    ro.elixir.device.name=Samsung Galaxy S9
+    ro.elixir.device=starlte
+    ro.elixir.maintainer=Cyder  
+    ro.elixir.maintainer.username=Cyderxxv
+    ro.elixir.group.url=t.me/Elixir9810
