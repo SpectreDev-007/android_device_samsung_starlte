@@ -27,13 +27,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 TARGET_INCLUDE_PIXEL_CHARGER := true
 IS_PHONE := true
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> c486104... Update aosp_starlte.mk
-CUSTOM_BUILD_TYPE := OFFICIAL
->>>>>>> c486104... Update aosp_starlte.mk
 TARGET_SUPPORTS_GOOGLE_RECORDER := false
 TARGET_INCLUDE_STOCK_ACORE := false
 TARGET_INCLUDE_LIVE_WALLPAPERS := true
